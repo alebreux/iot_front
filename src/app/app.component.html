@@ -1,4 +1,23 @@
 <button (click)="test()">Test</button>
 <hr>
-<input type="number" value="1" #numero>
-<button (click)="lumiere(numero.value)">Send Lumière</button>
+<div>
+  <p>Allumer la lumière numero</p>
+  <input type="number" value="1" #numeroAllume>
+  <button (click)="lumiereAllume(numeroAllume.value)">Allume Lumière</button>
+</div>
+<div>
+    <p>Éteindre la lumière numero</p>
+    <input type="number" value="1" #numeroEteint>
+    <button (click)="lumiereEteint(numeroEteint.value)">Eteint Lumière</button>
+</div>
+<div>
+  <p>Ouvrir la fenêtre</p>
+  <input type="number" value="1" #numeroVoletOn>
+  <button (click)="voletOn(numeroVoletOn.value)">Ouvre fenêtre</button>
+</div>
+<div>
+  <p>Fermer la fenêtre</p>
+  <input type="number" value="1" #numeroVoletOff>
+  <button (click)="voletOff(numeroVoletOff.value)">Ferme fenêtre</button>
+</div>
+

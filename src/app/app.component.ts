@@ -18,8 +18,17 @@ export class AppComponent {
   test(): void {
     this.http.get(environment.url + '/').subscribe();
   }
-  lumiere(numero: number): void {
-    this.http.get(environment.url + '/lumiere/allume/' +numero).subscribe();
-}
+  lumiereAllume(numero: number): void {
+    this.http.get(environment.url + '/lumiere/allume/' + numero, {responseType: 'text'}).subscribe(console.log);
+  }
+  lumiereEteint(numero: number): void {
+    this.http.get(environment.url + '/lumiere/eteint/' + numero, {responseType: 'text'}).subscribe(console.log);
+  }
+  voletOn(numero: number): void {
+    this.http.get(environment.url + '/volet/ouvre/' + numero, {responseType: 'text'}).subscribe(console.log);
+  }
+  voletOff(numero: number): void {
+    this.http.get(environment.url + '/volet/ferme/' + numero, {responseType: 'text'}).subscribe(console.log);
+  }
 
 }
